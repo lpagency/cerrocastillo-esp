@@ -1,0 +1,74 @@
+<header class="container-fluid header">
+  <div class="row">
+    <div class="col-xs-12 header-content">
+      <a href="#" class="header-logo">
+        {% if is_admin %}
+          <div class="image-upload visible-movil">
+            <label for="img_logo">
+              <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+            </label>
+            <input type="file" class="editableimage" image-id="{{ site.name }}_img_logo" name="image" id="img_logo" >
+          </div>
+        {% end %}
+        <img class="header-logo-img" id="{{ site.name }}_img_logo" src="{{ read_image(site.name + '_img_logo', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_img_logo',500) }}'" alt="item">
+      </a>
+      <button class="header-btn">
+        <div class="header-btn-line"></div>
+        <div class="header-btn-line"></div>
+        <div class="header-btn-line"></div>
+      </button>
+      <nav class="header-nav">
+        <div class="container">
+          <ul class="header-menu">
+            <li class="text text-white text-med header-item">
+              <a href="{{ site_base }}/como_trabajamos" class="header-link">COMO TRABAJAMOS</a>
+            </li>
+            <li class="text text-white text-med header-item margen">
+              <a href="{{ site_base }}/estrategia_de_inversion" class="header-link est">ESTRATEGIA DE INVERSIÓN</a>
+            </li>
+            <li class="text text-white text-med header-item header-item-expander"></li>
+            <li class="text text-white text-med header-item">
+              <a href="{{ site_base}}/equipo" class="header-link">EQUIPO</a>
+            </li>
+            <li class="text text-white text-med header-item margen-portafolio">
+              <a href="{{ site_base }}/portafolio" class="header-link">PORTAFOLIO</a>
+            </li>
+            <li class="header-item popup-open" data-popup="contact">
+              <img src="https://7static.loadingplay.com/static/images/f1a417ee47d11f0d7d968ce8c48c76c2_email.svg" alt="Contacto" class="header-item-icon">
+            </li>
+            <li class="text text-white text-med header-item header-item-col">
+              <a href="http://www.cerrocastillo-english.lpe.cl" class="hyper">
+                <img src="https://84static.loadingplay.com/static/images/ae6b143834416086a5ae9bd1634ce33c_banderainglesa.png" alt="Dropdown" class="header-item-arrow">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="popup" data-popup="contact">
+  <div class="popup-close popup-backdrop"></div>
+  <div class="popup-content">
+    <img src="https://84static.loadingplay.com/static/images/6aac6246036aaa1e1b12d8d0c5129b72_close.svg" alt="Close" class="popup-close popup-content-close">
+    <div class="contact">
+      <div class="col-xs-12 col-sm-5 contact-copy">
+        <h3 class="text text-med-big text-black contact-text">¡Sentémonos y hablemos!</h3>
+        <h4 class="text text-med-small contact-text">Oficina Cerro Castillo:
+        <br>Tel: 56 2 2963 9600</h4>
+      </div>
+      <div class="col-md-6">
+        <form action='https://forms.zohopublic.com/sytes/form/cerrocastilloformularioespaol/formperma/eb9bfEmF8Cb9b61627bG513J1/htmlRecords/submit' name='form' id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data' onSubmit="zf_validateandsubmitdata();">
+          <input class="contact-form-input" type="text" placeholder="Tu Nombre*" required></input>
+          <input class="contact-form-input" type="email" placeholder="Direccion de Email*" required></input>
+          <input class="contact-form-input" type="tel" placeholder="Numero de telefono*" required></input>
+          <textarea class="contact-form-input contact-form-input-textarea" placeholder="Mensaje*"></textarea>
+          <input type="submit" class="contact-form-btn" value="ENVIAR MENSAJE">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
