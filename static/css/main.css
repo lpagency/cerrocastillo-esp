@@ -240,8 +240,6 @@ img#cerrocastillo-english_footer_logo {
 
 .text-big-small {
   font-size: 2.08333rem;
-  max-height: 470px;
-  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -1162,7 +1160,8 @@ img#cerrocastillo-english_footer_logo {
 
 @media screen and (min-width: 1200px) {
   .focus-item {
-    max-height: 550px;
+    max-height: inherit;
+    height: inherit;
   }
 }
 
