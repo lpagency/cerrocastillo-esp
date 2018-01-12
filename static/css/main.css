@@ -23,6 +23,10 @@ div.image-upload .banner-invest {
     position: absolute;
 }
 
+.estrategia{
+        top: -200px !important;
+}
+
 .img-footer-logo{
     width: 200px;
     height: 200px;
@@ -1369,6 +1373,10 @@ img#cerrocastillo-english_footer_logo {
     width: 100%;
     object-fit: scale-down;
     height: auto;
+}
+
+.estrategia{
+    top: -21px !important;
 }
 }
 
