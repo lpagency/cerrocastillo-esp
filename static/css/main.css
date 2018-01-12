@@ -1250,7 +1250,7 @@ img#cerrocastillo-english_footer_logo {
     height: 122px;
     max-width: 290px;
     max-height: 122px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 @media screen and (min-width: 768px) {
@@ -1299,14 +1299,8 @@ img#cerrocastillo-english_footer_logo {
 }
 
 /*------------- 10. TEAM -------------*/
-.team {
-  padding: 5rem 15px 6.667rem 15px;
-}
-
-@media screen and (min-width: 768px) {
-  .team {
-    padding: 7.5rem 15px 10rem 15px;
-  }
+.mg-bt-10{
+  margin-bottom: 10%;
 }
 
 .team-item {
