@@ -26,6 +26,7 @@ div.image-upload .banner-invest {
 .img-footer-logo{
     width: 200px;
     height: 200px;
+    object-fit: contain;
 }
 
 .margen{
