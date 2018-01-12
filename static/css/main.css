@@ -1345,6 +1345,14 @@ img#cerrocastillo-english_footer_logo {
     height: auto;
     margin-left: 20px;
   }
+
+  .team-item-role, .team-item-name {
+    width: 90%;
+    height: 100px;
+    overflow: hidden;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
 }
 
 @media screen and (min-width: 768px) {
