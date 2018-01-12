@@ -431,6 +431,7 @@ img#cerrocastillo-english_footer_logo {
   overflow: hidden;
   bottom: 245px;
   position: relative;
+  top: 20px;
 }
 
 /*------------- 2. INTRO -------------*/
@@ -1390,6 +1391,16 @@ img#cerrocastillo-english_footer_logo {
     width: 340px;
     height: 88px;
   }
+
+  .margen-portafolio{
+    left: inherit !important;
+  }
+
+  .hyper {
+    position: relative;
+    top: inherit;
+    left: inherit;
+}
 }
 
 .team-popup-text + .team-popup-text {
