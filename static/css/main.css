@@ -1378,6 +1378,11 @@ img#cerrocastillo-english_footer_logo {
 .estrategia{
     top: -21px !important;
 }
+
+.equipo {
+    top: -85px !important;
+}
+
 }
 
 @media screen and (min-width: 1200px) {
