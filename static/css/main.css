@@ -37,6 +37,10 @@ div.image-upload .banner-invest {
     object-fit: contain;
 }
 
+.banner-por{
+  top: -250px !important;
+}
+
 .margen{
   margin-left: 2px !important;
 }
