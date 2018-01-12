@@ -292,9 +292,9 @@ img#cerrocastillo-english_footer_logo {
 
 @media screen and (min-width: 768px) {
   .text-small {
-    font-size: 1.15rem;
+    font-size: 1rem;
     line-height: 1.15rem;
-    max-width: 130px;
+    max-width: 177px;
   }
 }
 
@@ -530,6 +530,7 @@ img#cerrocastillo-english_footer_logo {
 
 @media screen and (min-width: 768px) {
   .footer-copy {
+    margin-top: 45px;
     text-align: right;
   }
 }
