@@ -23,6 +23,10 @@ div.image-upload .banner-invest {
     position: absolute;
 }
 
+.equipo{
+  top: -320px;
+}
+
 .estrategia{
         top: -200px !important;
 }
