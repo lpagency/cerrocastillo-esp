@@ -20,12 +20,12 @@
           <div class="text text-white text-small text-link {{editabletext}}" text-id="{{ site.name + '_texto_footer_4' }}"> {{ read_text(site.name +  '_texto_footer_4') }} </div>
           <div class="text text-white text-small text-link {{editabletext}}" text-id="{{ site.name + '_texto_footer_5' }}"> {{ read_text(site.name +  '_texto_footer_5') }} </div>
           <div class="text text-white text-small text-link">
-              {% if user is None %}
-                <a href="{{ site_base }}/auth/login" class="a-footer" >Login</a>
-              {% else %}
-                <a href="{{ site_base }}/auth/logout" class="a-footer" >Logout</a>
-              {% end %}
-            </div> 
+            {% if user is None %}
+              <a href="{{ site_base }}/auth/login" class="a-footer" >Login</a>
+            {% else %}
+              <a href="{{ site_base }}/auth/logout" class="a-footer" >Logout</a>
+            {% end %}
+          </div> 
         </div>
       </div>
     </div>
