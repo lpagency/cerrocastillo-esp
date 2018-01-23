@@ -10,9 +10,6 @@ body {
   font-size: 12px;
 }
 
-p > b {
-    font-size: 2.1625rem !important;
-}
 
 .est{
   width: 100%;
