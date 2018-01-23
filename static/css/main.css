@@ -11,7 +11,7 @@ body {
 }
 
 p > b {
-    font-size: 2.1625rem;
+    font-size: 2.1625rem !important;
 }
 
 .est{
