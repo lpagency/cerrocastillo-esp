@@ -735,7 +735,7 @@ img#cerrocastillo-english_footer_logo {
 
   .header-item + .header-item {
     margin-top: 0;
-    margin-left: 3.5rem;
+    margin-left: 1.5rem;
   }
 }
 
@@ -1390,7 +1390,7 @@ img#cerrocastillo-english_footer_logo {
   .investments-item-logo-img {
     width: 190px;
     position: relative;
-    left: -20px;
+    left: -4px;
   }
   
   .team-item-copy {
