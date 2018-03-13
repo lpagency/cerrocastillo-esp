@@ -69,6 +69,8 @@ div.image-upload .banner-invest {
 @media screen and (max-width: 414px)
 {
   .header-item-arrow{
+    top: 20px;
+    left: 42px;
     position: inherit;
   }
 }
@@ -623,6 +625,7 @@ img#cerrocastillo-english_footer_logo {
 
 @media screen and (min-width: 768px) {
   .header-logo {
+    background-color: white;
     padding: 0;
     width: 25%;
     max-width: 200px;
@@ -724,9 +727,15 @@ img#cerrocastillo-english_footer_logo {
 }
 
 @media screen and (min-width: 768px) {
+  .header-item-arrow{
+    left: 20px;
+    width: 32px;
+    top: 8px;
+  }
+
   .header-item + .header-item {
     margin-top: 0;
-    margin-left: 1.5rem;
+    margin-left: 3.5rem;
   }
 }
 
@@ -1378,6 +1387,12 @@ img#cerrocastillo-english_footer_logo {
 }
 
 @media screen and (min-width: 768px) {
+  .investments-item-logo-img {
+    width: 190px;
+    position: relative;
+    left: -20px;
+  }
+  
   .team-item-copy {
     margin-top: 0;
     position: absolute;
@@ -1400,6 +1415,9 @@ img#cerrocastillo-english_footer_logo {
 }
 
 @media screen and (max-width: 420px) {
+  .margen-portafolio{
+    left: 1px !important;
+  }
   .banner-bg {
     width: 100%;
     object-fit: scale-down;
@@ -1435,6 +1453,11 @@ img#cerrocastillo-english_footer_logo {
   .team-item-role, .team-item-name {
     width: 340px;
     height: 88px;
+  }
+
+  .header-item-arrow{
+    top: inherit;
+    left: inherit;
   }
 
   .margen-portafolio{
