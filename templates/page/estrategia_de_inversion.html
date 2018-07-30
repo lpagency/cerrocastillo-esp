@@ -8,14 +8,30 @@
  {% include '../home/header.html' %}
 {% end %}
 
+{% block css %}
+
+<style type="text/css">
+    h1 {
+        font-size: 2.5625rem;
+    }
+      p > b{
+      font-size: 2.1625rem;
+    }
+     p> span > b{
+      font-size: 2.5625rem;
+    }
+</style>
+
+{% end %}
+
 
 {% block javascript %}
 
-<script  type="text/javascript" src="{{ site_base }}/static/js/app.js"></script>
+<script  type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/js/app.js"></script>
 <script type="text/javascript">
   $(document).ready(function()
   {
-    $(".hyper").attr("href", "http://www.cerrocastillo-english.lpe.cl/focus");
+    $(".hyper").attr("href", "https://en.cerrocastillocapital.cl/focus");
   });
 </script>
 {% end %}
@@ -39,7 +55,7 @@
     {% end %}
     <img id="{{ site.name }}_banner_focus" src="{{ read_image(site.name + '_banner_focus', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_banner_focus',) }}'" class="banner-bg" alt="item">
     <div class="banner-copy banner-copy-right">
-        <div class="banner-title approach-title {{editabletext}}" text-id="{{ site.name + '_focus' }}"> {{ read_text(site.name +  '_focus') }}</div>
+        <div class="banner-title estrategia approach-title {{editabletext}}" text-id="{{ site.name + '_focus' }}"> {{ read_text(site.name +  '_focus') }}</div>
     </div>
 </section>
 

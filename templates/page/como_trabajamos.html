@@ -8,14 +8,24 @@
  {% include '../home/header.html' %}
 {% end %}
 
+{% block css %}
+  <style type="text/css">
+    p > b{
+      color: #231f20;
+    }
+     p> span > b{
+      color: #231f20;
+    }
+  </style>
+{% end %}
 
 {% block javascript %}
 
-<script  type="text/javascript" src="{{ site_base }}/static/js/app.js"></script>
+<script  type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/js/app.js"></script>
 <script type="text/javascript">
   $(document).ready(function()
   {
-    $(".hyper").attr("href", "http://www.cerrocastillo-english.lpe.cl/approach");
+    $(".hyper").attr("href", "https://en.cerrocastillocapital.cl/approach");
   });
 </script>
 {% end %}
@@ -38,7 +48,7 @@
   {% end %}
   <img id="{{ site.name }}_banner_approach" src="{{ read_image(site.name + '_banner_approach', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_banner_approach',) }}'" class="banner-bg" alt="item">
   <div class="banner-copy banner-copy-right">
-    <div class="banner-title approach-title {{editabletext}}" text-id="{{ site.name + '_approach' }}"> {{ read_text(site.name +  '_approach') }}</div>
+    <div class="banner-title estrategia approach-title {{editabletext}}" text-id="{{ site.name + '_approach' }}"> {{ read_text(site.name +  '_approach') }}</div>
   </div>
 </section>
 
