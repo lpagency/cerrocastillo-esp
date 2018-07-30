@@ -40,7 +40,7 @@
 
         <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/s/dt/dt-1.10.10/datatables.min.css"/> -->
 
-        
+
         {% block css %}{% end %}
 
         {% include 'product/product_box.html' %}
@@ -107,10 +107,10 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-        
+
 
 <!--         <script src="/path/to/parallax.js"></script> -->
-        
+
 <!--         <script type="text/javascript" src="{{ site_base }}/static/js/mlb.js"></script>
 
         <script type="text/javascript" src="{{ site_base }}/static/js/me.js" ></script> -->
@@ -134,7 +134,7 @@
                 <!-- carga de productos -->
 <!--          <script type="text/javascript" src="{{ site_base }}/static/js/plugins/jquery.lazyload.js"></script> -->
         <!-- <script type="text/javascript" src="{{ site_base }}/static/js/imageloader.js" ></script> -->
-        
+
         <script type="text/javascript" src="{{ site_base }}/common/js/jquery.cookie.js"></script>
         <script type="text/javascript" src="{{ site_base }}/common/js/environment.detection.js"></script>
         <script type="text/javascript" src="{{ site_base }}/common/js/bodegas/dist/bodegas.client.js"></script>
@@ -192,11 +192,11 @@
 </script>
 <script type="text/x-template" id="shopping-cart-total" >
 <tr>
-    
+
 </tr>
 </thead>
 <tr>
-    <td>Total:</td> 
+    <td>Total:</td>
     <td id="total" class="text-right money lib">{{! total }}</td>
     <td></td>
 </tr>
@@ -206,20 +206,20 @@
 </script>
 <script type="text/x-template" id="shopping-cart-checkout-form" >
 <form action="{{! checkout_url}}" method="get" novalidate id="shipping-form" class="myform" onclick="return Validate()">
-    <input name="site_id" class="form-control required" type="hidden" value="{{! site_id}}">
+    <input name="site_name" class="form-control required" type="hidden" value="{{! site_name}}">
     <input name="cart_id" class="form-control required" type="hidden" value="{{! cart_id}}">
     <input name="origin" class="form-control required" type="hidden" value="{{ site.name }}">
     <div class="form-group text-center">
          <button type="submit" class="btn bn" style="
             background-color: rgba(0, 0, 0, 0.24); color: #777; width: 31%;border-radius: 0px; height: 51px; font-weight: 600; float:right;">PAGAR
         </button>
-    
+
     </div>
 </form>
-   <div class=""> 
+   <div class="">
              <a class="modal-close pin" data-dismiss="modal" aria-hidden="true">VOLVER</a>
-               
-           </a>        
+
+           </a>
         </div>
 </script>
 
@@ -269,8 +269,8 @@
             {
                 var hash = window.location.hash;
                 // window.location.href= hash;
-                
-                if (hash !== "") 
+
+                if (hash !== "")
                 {
                     $('html,body').animate({
                         scrollTop: $(hash).offset().top
