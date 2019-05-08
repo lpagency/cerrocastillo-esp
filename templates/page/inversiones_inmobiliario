@@ -1,0 +1,368 @@
+{% extends "../base.html" %}
+
+{% block title %}
+{{ site.name }}
+{% end %}
+
+{% block header %}
+ {% include '../home/header.html' %}
+{% end %}
+
+{% block css %}
+<style type="text/css">
+    .portafolio{
+        position: relative !important;
+    }
+</style>
+{% end %}
+
+{% block javascript %}
+<script type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/js/app.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".hyper").attr("href", "https://en.cerrocastillocapital.cl/investments");
+    });
+</script>
+{% end %}
+
+{% block body %}
+{% if is_admin %} {% set editabletext = 'editabletext' %} {% else %} {% set editabletext = '' %} {% end %}
+
+<section class="container-fluid banner">
+    {% if is_admin %}
+    <div class="image-upload lapiz visible-movil">
+        <label for="img_banner_investmentinmobiliario">
+            <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png"
+                onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';"
+                onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+        </label>
+        <input type="file" class="editableimage" image-id="{{ site.name }}_banner_investmentinmobiliario" name="image" id="img_banner_investmentinmobiliario">
+    </div>
+    {% end %}
+    <img id="{{ site.name }}_banner_investmentinmobiliario" src="{{ read_image(site.name + '_banner_investmentinmobiliario', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_banner_investmentinmobiliario',) }}'"
+        class="banner-bg" alt="item">
+    <div class="banner-copy banner-copy-right">
+        <h1 class="banner-title banner-por approach-title {{editabletext}}" text-id="{{ site.name + '_investmentinmobiliario' }}"> {{ read_text(site.name + '_investmentinmobiliario') }}</h1>
+    </div>
+</section>
+
+<section class="container investments">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="text text-big text-black investments-title {{editabletext}}" text-id="{{ site.name + '_edit' }}"> {{ read_text(site.name + '_edit') }}</h2>
+            <div class="investments-list">
+                <div class="investments-item">
+                    <div class="investments-item-logo">
+                        {% if is_admin %}
+                        <div class="image-upload banner-invest lapiz visible-movil portafolio">
+                            <label for="img_banner_investmentinmobiliario_1">
+                                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png"
+                                    onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';"
+                                    onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                            </label>
+                            <input type="file" class="editableimage" image-id="{{ site.name }}_banner_investmentinmobiliario_1" name="image" id="img_banner_investmentinmobiliario_1">
+                        </div>
+                        {% end %}
+                        <img id="{{ site.name }}_banner_investmentinmobiliario_1" src="{{ read_image(site.name + '_banner_investmentinmobiliario_1', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_banner_investmentinmobiliario_1',) }}'"
+                            class="investments-item-logo-img" alt="item">
+                    </div>
+                    <div class="investments-item-copy">
+                        <ul class="investments-item-info">
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_nueve' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_nueve') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_diez' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_diez') }}</div>
+                            </li>
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_once' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_once') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_doce' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_doce') }}</div>
+                            </li>
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_trece' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_trece') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_catorce' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_catorce') }}</div>
+                            </li>
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_quince' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_quince') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_dieciseis' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_dieciseis') }}</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="investments-item">
+                    <div class="investments-item-logo">
+                        {% if is_admin %}
+                        <div class="image-upload banner-invest lapiz visible-movil portafolio">
+                            <label for="img_banner_investmentinmobiliario_2">
+                                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png"
+                                    onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';"
+                                    onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                            </label>
+                            <input type="file" class="editableimage" image-id="{{ site.name }}_banner_investmentinmobiliario_2" name="image" id="img_banner_investmentinmobiliario_2">
+                        </div>
+                        {% end %}
+                        <img id="{{ site.name }}_banner_investmentinmobiliario_2" src="{{ read_image(site.name + '_banner_investmentinmobiliario_2', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_banner_investmentinmobiliario_2',) }}'"
+                            class="investments-item-logo-img" alt="item">
+                    </div>
+                    <div class="investments-item-copy">
+                        <ul class="investments-item-info">
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_a' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_a') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_b' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_b') }}</div>
+                            </li>
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_c' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_c') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_d' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_d') }}</div>
+                            </li>
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_e' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_e') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_f' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_f') }}</div>
+                            </li>
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_g' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_g') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_h' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_h') }}</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="investments-item">
+                    <div class="investments-item-logo">
+                        {% if is_admin %}
+                        <div class="image-upload banner-invest lapiz visible-movil portafolio">
+                            <label for="img_banner_investmentinmobiliario_3">
+                                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png"
+                                    onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';"
+                                    onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                            </label>
+                            <input type="file" class="editableimage" image-id="{{ site.name }}_banner_investmentinmobiliario_3" name="image" id="img_banner_investmentinmobiliario_3">
+                        </div>
+                        {% end %}
+                        <img id="{{ site.name }}_banner_investmentinmobiliario_3" src="{{ read_image(site.name + '_banner_investmentinmobiliario_3', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_banner_investmentinmobiliario_3',) }}'"
+                            class="investments-item-logo-img" alt="item">
+                    </div>
+                    <div class="investments-item-copy">
+                        <ul class="investments-item-info">
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_dieciocho' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_dieciocho') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_diecinueve' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_diecinueve') }}</div>
+                            </li>
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_veinte' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_veinte') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_veintidos' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_veintidos') }}</div>
+                            </li>
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_veintitres' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_veintitres') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_veinticuatro' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_veinticuatro') }}</div>
+                            </li>
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_veinticinco' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_veinticinco') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_veintiseis' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_veintiseis') }}</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="investments-item">
+                    <div class="investments-item-logo">
+                        {% if is_admin %}
+                        <div class="image-upload banner-invest lapiz visible-movil portafolio">
+                            <label for="img_banner_investmentinmobiliario_4">
+                                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png"
+                                    onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';"
+                                    onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                            </label>
+                            <input type="file" class="editableimage" image-id="{{ site.name }}_banner_investmentinmobiliario_4" name="image" id="img_banner_investmentinmobiliario_4">
+                        </div>
+                        {% end %}
+                        <img id="{{ site.name }}_banner_investmentinmobiliario_4" src="{{ read_image(site.name + '_banner_investmentinmobiliario_4', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_banner_investmentinmobiliario_4',) }}'"
+                            class="investments-item-logo-img" alt="item">
+                    </div>
+                    <div class="investments-item-copy">
+                        <ul class="investments-item-info">
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_veintisiete' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_veintisiete') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_veintiocho' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_veintiocho') }}</div>
+                            </li>
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_veintinueve' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_veintinueve') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_treinta' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_treinta') }}</div>
+                            </li>
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_treintayuno' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_treintayuno') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_treintaydos' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_treintaydos') }}</div>
+                            </li>
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_treintaytres' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_treintaytres') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_treintaycuatro' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_treintaycuatro') }}</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="investments-item">
+                    <div class="investments-item-logo">
+                        {% if is_admin %}
+                        <div class="image-upload banner-invest lapiz visible-movil portafolio">
+                            <label for="img_banner_investmentinmobiliario_5">
+                                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png"
+                                    onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';"
+                                    onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                            </label>
+                            <input type="file" class="editableimage" image-id="{{ site.name }}_banner_investmentinmobiliario_5" name="image" id="img_banner_investmentinmobiliario_5">
+                        </div>
+                        {% end %}
+                        <img id="{{ site.name }}_banner_investmentinmobiliario_5" src="{{ read_image(site.name + '_banner_investmentinmobiliario_5', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_banner_investmentinmobiliario_5',) }}'"
+                            class="investments-item-logo-img" alt="item">
+                    </div>
+                    <div class="investments-item-copy">
+                        <ul class="investments-item-info">
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_treintaycinco' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_treintaycinco') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_treintayseis' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_treintayseis') }}</div>
+                            </li>
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_treintaysiete' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_treintaysiete') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_treintayocho' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_treintayocho') }}</div>
+                            </li>
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_treintaynueve' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_treintaynueve') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_cuarenta' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_cuarenta') }}</div>
+                            </li>
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_cuarentayuno' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_cuarentayuno') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_cuarentaydos' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_cuarentaydos') }}</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="investments-item">
+                    <div class="investments-item-logo">
+                        {% if is_admin %}
+                        <div class="image-upload banner-invest lapiz visible-movil portafolio">
+                            <label for="img_banner_investmentinmobiliario_6">
+                                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png"
+                                    onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';"
+                                    onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                            </label>
+                            <input type="file" class="editableimage" image-id="{{ site.name }}_banner_investmentinmobiliario_6" name="image" id="img_banner_investmentinmobiliario_6">
+                        </div>
+                        {% end %}
+                        <img id="{{ site.name }}_banner_investmentinmobiliario_6" src="{{ read_image(site.name + '_banner_investmentinmobiliario_6', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_banner_investmentinmobiliario_6',) }}'"
+                            class="investments-item-logo-img" alt="item">
+                    </div>
+                    <div class="investments-item-copy">
+                        <ul class="investments-item-info">
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_cuarentaytres' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_cuarentaytres') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_cuarentaycuatro' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_cuarentaycuatro') }}</div>
+                            </li>
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_cuarentaycinco' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_cuarentaycinco') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_cuarentayseis' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_cuarentayseis') }}</div>
+                            </li>
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_cuarentaysiete' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_cuarentaysiete') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_cuarentayocho' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_cuarentayocho') }}</div>
+                            </li>
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_cuarentaynueve' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_cuarentaynueve') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_cincuenta' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_cincuenta') }}</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="investments-item">
+                    <div class="investments-item-logo">
+                        {% if is_admin %}
+                        <div class="image-upload banner-invest lapiz visible-movil portafolio">
+                            <label for="img_banner_investmentinmobiliario_7">
+                                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png"
+                                    onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';"
+                                    onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                            </label>
+                            <input type="file" class="editableimage" image-id="{{ site.name }}_banner_investmentinmobiliario_7" name="image" id="img_banner_investmentinmobiliario_7">
+                        </div>
+                        {% end %}
+                        <img id="{{ site.name }}_banner_investmentinmobiliario_7" src="{{ read_image(site.name + '_banner_investmentinmobiliario_7', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_banner_investmentinmobiliario_7',) }}'"
+                            class="investments-item-logo-img" alt="item">
+                    </div>
+                    <div class="investments-item-copy">
+                        <ul class="investments-item-info">
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_cincuentayuno' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_cincuentayuno') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_cincuentaydos' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_cincuentaydos') }}</div>
+                            </li>
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_cincuentaytres' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_cincuentaytres') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_cincuentaycuatro' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_cincuentaycuatro') }}</div>
+                            </li>
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_cincuentaycinco' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_cincuentaycinco') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_cincuentayseis' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_cincuentayseis') }}</div>
+                            </li>
+                            <li class="investments-item-info-item">
+                                <div class="text text-black text-big-med investments-item-info-item-key {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_cincuentaysiete' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_cincuentaysiete') }}</div>
+                                <div class="text text-big-med investments-item-info-item-value {{editabletext}}" text-id="{{ site.name + '_textoinvestprivequity_cincuentayocho' }}">
+                                {{ read_text(site.name + '_textoinvestprivequity_cincuentayocho') }}</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include '../home/footer.html' %}
+{% end %}
